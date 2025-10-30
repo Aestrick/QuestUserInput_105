@@ -58,7 +58,6 @@ fun FormulirScreen(modifier: Modifier = Modifier) {
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        // Input Gender (Radio Button)
         Text(text = "Jenis Kelamin", style = MaterialTheme.typography.bodyLarge)
         Row(
             modifier = Modifier.fillMaxWidth(),
