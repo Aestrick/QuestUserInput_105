@@ -48,7 +48,6 @@ fun FormulirScreen(modifier: Modifier = Modifier) {
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        // Input Nama Lengkap
         OutlinedTextField(
             value = inputNama,
             onValueChange = { inputNama = it },
