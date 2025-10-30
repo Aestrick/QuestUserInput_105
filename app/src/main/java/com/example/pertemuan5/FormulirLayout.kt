@@ -1,4 +1,4 @@
-package com.example.pertemuan5 // <-- SUDAH DIGANTI
+package com.example.pertemuan5 // Pastikan package-mu benar
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
@@ -21,28 +21,33 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.pertemuan5.ui.theme.Pertemuan5Theme // <-- SUDAH DIGANTI
+import com.example.pertemuan5.ui.theme.Pertemuan5Theme
+
+// --- TAMBAHKAN IMPORT INI ---
+import androidx.compose.foundation.layout.systemBarsPadding
+// ------------------------------
 
 @Composable
 fun FormulirScreen(modifier: Modifier = Modifier) {
-    // 1. Variabel untuk menyimpan data yang SEDANG DIISI di formulir
+    // ... (Semua kode 'var' biarkan saja, tidak ada perubahan) ...
     var inputNama by remember { mutableStateOf("") }
     var inputAlamat by remember { mutableStateOf("") }
     var selectedGender by remember { mutableStateOf("") }
-
-    // 2. Variabel untuk menyimpan data yang AKAN DITAMPILKAN di card
     var displayedNama by remember { mutableStateOf("") }
     var displayedAlamat by remember { mutableStateOf("") }
     var displayedGender by remember { mutableStateOf("") }
-
-    // Daftar pilihan untuk Radio Button
     val genderOptions = listOf("Laki-laki", "Perempuan")
 
     Column(
         modifier = modifier
             .fillMaxSize()
+            // --- TAMBAHKAN MODIFIER INI ---
+            // Ini akan memberi padding di atas (untuk status bar)
+            // dan di bawah (untuk navigation bar) secara otomatis.
+            .systemBarsPadding()
+            // ---------------------------------
             .padding(16.dp)
-            .verticalScroll(rememberScrollState()) // Agar bisa di-scroll
+            .verticalScroll(rememberScrollState())
     ) {
         // --- Bagian Formulir Input ---
 
@@ -102,7 +107,6 @@ fun FormulirScreen(modifier: Modifier = Modifier) {
         // Tombol Simpan
         Button(
             onClick = {
-                // 3. Salin data dari 'input' ke 'displayed' saat tombol ditekan
                 displayedNama = inputNama
                 displayedAlamat = inputAlamat
                 displayedGender = selectedGender
@@ -120,14 +124,13 @@ fun FormulirScreen(modifier: Modifier = Modifier) {
             modifier = Modifier
                 .fillMaxWidth(),
             colors = CardDefaults.cardColors(
-                containerColor = Color.DarkGray // Warna card hitam
+                containerColor = Color.DarkGray
             ),
             elevation = CardDefaults.cardElevation(defaultElevation = 8.dp)
         ) {
             Column(
                 modifier = Modifier.padding(16.dp)
             ) {
-                // 4. Tampilkan data dari variabel 'displayed'
                 Text(
                     text = "Nama : $displayedNama",
                     color = Color.White
@@ -148,7 +151,7 @@ fun FormulirScreen(modifier: Modifier = Modifier) {
 @Preview(showBackground = true)
 @Composable
 fun FormulirPreview() {
-    Pertemuan5Theme { // <-- SUDAH DIGANTI
+    Pertemuan5Theme {
         FormulirScreen()
     }
 }
