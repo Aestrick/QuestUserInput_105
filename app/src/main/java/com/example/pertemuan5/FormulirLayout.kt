@@ -1,4 +1,4 @@
-package com.example.pertemuan5 // Pastikan package-mu benar
+package com.example.pertemuan5
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
