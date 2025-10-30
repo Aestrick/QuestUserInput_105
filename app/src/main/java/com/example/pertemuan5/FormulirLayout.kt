@@ -43,7 +43,6 @@ fun FormulirScreen(modifier: Modifier = Modifier) {
             .padding(16.dp)
             .verticalScroll(rememberScrollState())
     ) {
-        // --- Bagian Formulir Input ---
 
         Text(text = "Formulir Data Diri", style = MaterialTheme.typography.headlineSmall)
 
