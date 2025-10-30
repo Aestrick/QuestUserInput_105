@@ -1,4 +1,4 @@
-package com.example.pertemuan5 // <-- SUDAH DIGANTI
+package com.example.pertemuan5
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -20,7 +20,6 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    // Panggil fungsi formulir kita di sini
                     FormulirScreen()
                 }
             }
