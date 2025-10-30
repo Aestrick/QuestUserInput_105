@@ -24,7 +24,6 @@ import androidx.compose.ui.unit.dp
 import com.example.pertemuan5.ui.theme.Pertemuan5Theme
 
 import androidx.compose.foundation.layout.systemBarsPadding
-// ------------------------------
 
 @Composable
 fun FormulirScreen(modifier: Modifier = Modifier) {
