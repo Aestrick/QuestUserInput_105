@@ -8,17 +8,20 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
-import com.example.pertemuan5.ui.theme.Pertemuan5Theme // <-- SUDAH DIGANTI
+import com.example.pertemuan5.ui.theme.Pertemuan5Theme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            Pertemuan5Theme {
+            // --- PERUBAHAN DI SINI ---
+            // Kita paksa 'darkTheme = false'
+            Pertemuan5Theme(darkTheme = false) {
+                // -------------------------
                 Surface(
                     modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
+                    color = MaterialTheme.colorScheme.background // Ini akan menjadi putih
                 ) {
                     FormulirScreen()
                 }

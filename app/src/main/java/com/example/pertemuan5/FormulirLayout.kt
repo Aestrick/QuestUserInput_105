@@ -22,7 +22,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.pertemuan5.ui.theme.Pertemuan5Theme
-
 import androidx.compose.foundation.layout.systemBarsPadding
 
 @Composable
@@ -39,15 +38,16 @@ fun FormulirScreen(modifier: Modifier = Modifier) {
         modifier = modifier
             .fillMaxSize()
             .systemBarsPadding()
-            // ---------------------------------
             .padding(16.dp)
             .verticalScroll(rememberScrollState())
     ) {
 
+        // Teks ini akan otomatis jadi hitam
         Text(text = "Formulir Data Diri", style = MaterialTheme.typography.headlineSmall)
 
         Spacer(modifier = Modifier.height(16.dp))
 
+        // Teks dan border field ini akan otomatis jadi hitam
         OutlinedTextField(
             value = inputNama,
             onValueChange = { inputNama = it },
@@ -57,6 +57,7 @@ fun FormulirScreen(modifier: Modifier = Modifier) {
 
         Spacer(modifier = Modifier.height(16.dp))
 
+        // Teks ini akan otomatis jadi hitam
         Text(text = "Jenis Kelamin", style = MaterialTheme.typography.bodyLarge)
         Row(
             modifier = Modifier.fillMaxWidth(),
@@ -107,18 +108,20 @@ fun FormulirScreen(modifier: Modifier = Modifier) {
 
         Spacer(modifier = Modifier.height(24.dp))
 
-
         Card(
             modifier = Modifier
                 .fillMaxWidth(),
             colors = CardDefaults.cardColors(
-                containerColor = Color.DarkGray
+                // --- PERUBAHAN DI SINI ---
+                containerColor = Color.Black // Menjadi hitam pekat
+                // -------------------------
             ),
             elevation = CardDefaults.cardElevation(defaultElevation = 8.dp)
         ) {
             Column(
                 modifier = Modifier.padding(16.dp)
             ) {
+                // Teks ini sudah kita atur jadi putih
                 Text(
                     text = "Nama : $displayedNama",
                     color = Color.White
@@ -139,7 +142,8 @@ fun FormulirScreen(modifier: Modifier = Modifier) {
 @Preview(showBackground = true)
 @Composable
 fun FormulirPreview() {
-    Pertemuan5Theme {
+    // Atur preview agar menggunakan tema terang juga
+    Pertemuan5Theme(darkTheme = false) {
         FormulirScreen()
     }
 }
