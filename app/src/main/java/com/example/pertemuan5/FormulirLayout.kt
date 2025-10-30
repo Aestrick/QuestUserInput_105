@@ -38,9 +38,6 @@ fun FormulirScreen(modifier: Modifier = Modifier) {
     Column(
         modifier = modifier
             .fillMaxSize()
-            // --- TAMBAHKAN MODIFIER INI ---
-            // Ini akan memberi padding di atas (untuk status bar)
-            // dan di bawah (untuk navigation bar) secara otomatis.
             .systemBarsPadding()
             // ---------------------------------
             .padding(16.dp)
