@@ -27,7 +27,6 @@ import androidx.compose.foundation.layout.systemBarsPadding
 
 @Composable
 fun FormulirScreen(modifier: Modifier = Modifier) {
-    // ... (Semua kode 'var' biarkan saja, tidak ada perubahan) ...
     var inputNama by remember { mutableStateOf("") }
     var inputAlamat by remember { mutableStateOf("") }
     var selectedGender by remember { mutableStateOf("") }
