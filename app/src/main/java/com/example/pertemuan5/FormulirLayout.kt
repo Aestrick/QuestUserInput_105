@@ -110,7 +110,6 @@ fun FormulirScreen(modifier: Modifier = Modifier) {
 
         Spacer(modifier = Modifier.height(24.dp))
 
-        // --- Bagian Card Tampilan Data ---
 
         Card(
             modifier = Modifier
