@@ -1,4 +1,22 @@
 <resources>
-    <string name="app_name">Pertemuan5</string>
-    <string name="submit">submit</string>
+    <string name="app_name">PraktikumPAW5</string>
+
+    <string name="form_title">Formulir Pendaftaran</string>
+    <string name="label_nama_lengkap">NAMA LENGKAP</string>
+    <string name="placeholder_nama">Isian nama lengkap</string>
+    <string name="label_jenis_kelamin">JENIS KELAMIN</string>
+    <string name="option_pria">Laki-laki</string>
+    <string name="option_wanita">Perempuan</string>
+    <string name="label_status_perkawinan">STATUS PERKAWINAN</string>
+    <string name="option_janda">Janda</string>
+    <string name="option_lajang">Lajang</string>
+    <string name="option_duda">Duda</string>
+    <string name="label_alamat">ALAMAT</string>
+    <string name="placeholder_alamat">Alamat</string>
+    <string name="button_submit">Submit</string>
+
+    <string name="result_name_label">Nama :</string>
+    <string name="result_gender_label">Gender :</string>
+    <string name="result_status_label">Status :</string>
+    <string name="result_address_label">Alamat :</string>
 </resources>
